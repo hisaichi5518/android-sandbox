@@ -16,8 +16,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.RecyclerViewActivity"
-            android:label="@string/title_activity_recycler_view"
+            android:name=".ui.activity.GridRecyclerViewActivity"
+            android:label="@string/title_activity_grid_recycler_view"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

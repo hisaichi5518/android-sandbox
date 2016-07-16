@@ -19,7 +19,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:contentDescription="@null"
-            android:text="RecyclerView"
+            android:text="@string/title_activity_grid_recycler_view"
             app:layout_constraintLeft_toLeftOf="@+id/activity_main"
             app:layout_constraintRight_toRightOf="@+id/activity_main"
             app:layout_constraintTop_toTopOf="@+id/activity_main" />

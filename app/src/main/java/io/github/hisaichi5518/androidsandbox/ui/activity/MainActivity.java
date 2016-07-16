@@ -18,6 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.activity_main__recycler_button)
     void onClickedRecyclerViewButton() {
-        startActivity(new RecyclerViewActivityIntentBuilder().build(this));
+        startActivity(new GridRecyclerViewActivityIntentBuilder().build(this));
     }
 }

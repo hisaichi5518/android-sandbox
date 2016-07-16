@@ -13,29 +13,29 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import io.github.hisaichi5518.androidsandbox.R;
-import io.github.hisaichi5518.androidsandbox.databinding.ActivityRecyclerViewBinding;
+import io.github.hisaichi5518.androidsandbox.databinding.ActivityGridRecyclerViewBinding;
 import io.github.hisaichi5518.androidsandbox.helper.ActivityHelper;
 import se.emilsjolander.intentbuilder.IntentBuilder;
 
 @IntentBuilder
-public class RecyclerViewActivity extends AppCompatActivity {
+public class GridRecyclerViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityRecyclerViewBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_recycler_view);
+        ActivityGridRecyclerViewBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_grid_recycler_view);
 
-        binding.activityRecyclerViewToolbar.setTitle(R.string.title_activity_recycler_view);
-        setSupportActionBar(binding.activityRecyclerViewToolbar);
+        binding.activityGridRecyclerViewToolbar.setTitle(R.string.title_activity_grid_recycler_view);
+        setSupportActionBar(binding.activityGridRecyclerViewToolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        binding.activityRecyclerViewList.setAdapter(new ItemAdapter());
-        binding.activityRecyclerViewList.setLayoutManager(new GridLayoutManager(this, 2));
+        binding.activityGridRecyclerViewList.setAdapter(new ItemAdapter());
+        binding.activityGridRecyclerViewList.setLayoutManager(new GridLayoutManager(this, 2));
 
         int margin = getResources().getDimensionPixelSize(R.dimen.recycler_view_margin);
-        binding.activityRecyclerViewList.addItemDecoration(new ItemDecoration(margin, margin, margin, margin));
+        binding.activityGridRecyclerViewList.addItemDecoration(new ItemDecoration(margin, margin, margin, margin));
     }
 
     @Override
@@ -49,7 +49,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         @Override
         public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            return new ItemViewHolder(new TextView(RecyclerViewActivity.this));
+            return new ItemViewHolder(new TextView(GridRecyclerViewActivity.this));
         }
 
         @Override
@@ -70,7 +70,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         void render() {
             ((TextView) itemView).setText("こんにちはこんにちは");
-            itemView.setBackgroundColor(ContextCompat.getColor(RecyclerViewActivity.this, R.color.colorAccent));
+            itemView.setBackgroundColor(ContextCompat.getColor(GridRecyclerViewActivity.this, R.color.colorAccent));
         }
     }
 
