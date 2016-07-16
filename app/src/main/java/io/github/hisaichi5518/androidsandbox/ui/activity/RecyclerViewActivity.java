@@ -45,7 +45,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
     }
 
     private class ItemAdapter extends RecyclerView.Adapter<ItemViewHolder> {
-        private static final int ITEM_COUNT = 20;
+        private static final int ITEM_COUNT = 2000;
 
         @Override
         public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
